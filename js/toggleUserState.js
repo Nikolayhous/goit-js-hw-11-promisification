@@ -9,11 +9,16 @@ const users = [
 ];
 
 const toggleUserState = (allUsers, userName) => {
+  
   return new Promise(resolve => {
-    const updatedUsers = allUsers.map(user =>
-      user.name === userName ? { ...user, active: !user.active } : user
-    );
-    resolve(updatedUsers);
+
+    setTimeout(() => {
+      const updatedUsers = allUsers.map(user =>
+        user.name === userName ? { ...user, active: !user.active } : user
+      );
+      resolve(updatedUsers);
+    }, 1500)
+
   });
 };
 
